@@ -36,12 +36,12 @@ services:
       '--bind-to',
       '0.0.0.0'
     ]
-  localnet-deployer:
+  test-deployer:
     extra_hosts:
     - 'host.docker.internal:host-gateway'
     build:
       context: ../../
-      dockerfile: 'src/docker/localnet-deployer/Dockerfile'
+      dockerfile: 'src/docker/test-deployer/Dockerfile'
       args:
         PUBLISHER_PRIVATE_KEY: '${PUBLISHER_PRIVATE_KEY}'
         EMOJICOIN_MODULE_ADDRESS: '${EMOJICOIN_MODULE_ADDRESS}'
@@ -50,7 +50,7 @@ services:
       required: true
     - path: './.env'
       required: false
-    image: 'xbtmatt/emojicoin-dot-fun-localnet-deployer:latest'
+    image: 'xbtmatt/emojicoin-dot-fun-test-deployer:latest'
     profiles: ["test-harness"]
     depends_on:
       aptos-node:
