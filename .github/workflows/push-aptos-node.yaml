@@ -23,6 +23,9 @@ jobs:
         username: '${{ secrets.DOCKERHUB_USERNAME }}'
     - uses: 'docker/build-push-action@v6'
       with:
+        build-args: |
+          PUBLISHER_PRIVATE_KEY=${{ env.PUBLISHER_PRIVATE_KEY }}
+          EMOJICOIN_MODULE_ADDRESS=${{ env.EMOJICOIN_MODULE_ADDRESS }}
         cache-from: 'type=gha'
         cache-to: 'type=gha,mode=max'
         context: '.'
