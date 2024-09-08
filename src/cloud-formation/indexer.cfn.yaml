@@ -699,7 +699,7 @@ Resources:
             - 'Constants'
             - 'ImageCache'
             - 'RepositoryPrefix'
-          - '/econialabs/emojicoin-dot-fun-indexer-broker:'
+          - '/xbtmatt/emojicoin-dot-fun-indexer-broker:'
           - !Ref 'BrokerImageVersion'
         LogConfiguration:
           LogDriver: 'awslogs'
@@ -1548,7 +1548,7 @@ Resources:
             - 'Constants'
             - 'ImageCache'
             - 'RepositoryPrefix'
-          - '/econialabs/emojicoin-dot-fun-indexer-processor:'
+          - '/xbtmatt/emojicoin-dot-fun-indexer-processor:'
           - !Ref 'ProcessorImageVersion'
         LogConfiguration:
           LogDriver: 'awslogs'

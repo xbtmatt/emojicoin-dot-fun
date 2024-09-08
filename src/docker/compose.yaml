@@ -14,7 +14,7 @@ services:
       PROCESSOR_WS_URL: 'ws://processor:${PROCESSOR_WS_PORT}/ws'
       PORT: '${BROKER_PORT}'
       RUST_LOG: 'info,broker=trace'
-    image: 'econialabs/emojicoin-dot-fun-indexer-broker'
+    image: 'xbtmatt/emojicoin-dot-fun-indexer-broker'
     healthcheck:
       test: 'curl -f http://localhost:${BROKER_PORT}/live || exit 1'
       interval: '2m'
@@ -74,7 +74,7 @@ services:
     depends_on:
       postgres:
         condition: 'service_healthy'
-    image: 'econialabs/emojicoin-dot-fun-indexer-processor'
+    image: 'xbtmatt/emojicoin-dot-fun-indexer-processor'
     healthcheck:
       test: 'curl -f http://localhost:${PROCESSOR_WS_PORT}/ || exit 1'
       interval: '2m'
@@ -103,7 +103,7 @@ services:
         NEXT_PUBLIC_REWARDS_MODULE_ADDRESS: >-
           ${EMOJICOIN_REWARDS_MODULE_ADDRESS}
         REVALIDATION_TIME: '${REVALIDATION_TIME}'
-    image: 'econialabs/emojicoin-dot-fun:frontend'
+    image: 'xbtmatt/emojicoin-dot-fun:frontend'
     profiles:
     - 'frontend'
     environment:

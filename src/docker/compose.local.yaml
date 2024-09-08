@@ -15,7 +15,7 @@ include:
 services:
   localnet:
     network_mode: 'host'
-    image: 'econialabs/aptos-cli:4.1.0'
+    image: 'xbtmatt/aptos-cli:4.1.0'
     environment:
       FORCE_RESTART: '${FORCE_RESTART:-}'
     healthcheck:
@@ -50,7 +50,7 @@ services:
     environment:
       FORCE_RESTART: '${FORCE_RESTART:-}'
       PUBLISHER_PRIVATE_KEY: '${PUBLISHER_PRIVATE_KEY}'
-    image: 'econialabs/emojicoin-dot-fun-localnet-publisher:latest'
+    image: 'xbtmatt/emojicoin-dot-fun-localnet-publisher:latest'
     depends_on:
       localnet:
         condition: 'service_healthy'

@@ -8,7 +8,7 @@ jobs:
     - id: 'metadata'
       uses: 'docker/metadata-action@v5'
       with:
-        images: 'econialabs/emojicoin-dot-fun-indexer-broker'
+        images: 'xbtmatt/emojicoin-dot-fun-indexer-broker'
         tags: |
           type=match,pattern=broker-v(.*),group=1
     - uses: 'docker/setup-qemu-action@v3'
