@@ -14,7 +14,7 @@ jobs:
     - id: 'metadata'
       uses: 'docker/metadata-action@v5'
       with:
-        images: 'econialabs/emojicoin-dot-fun-deployer'
+        images: 'xbtmatt/emojicoin-dot-fun-deployer'
         tags: |
           type=match,pattern=emojicoin-dot-fun-deployer-v(.*),group=1
     - uses: 'docker/setup-qemu-action@v3'
