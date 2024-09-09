@@ -1,6 +1,6 @@
 # cspell:word localnet
 
-FROM xbtmatt/aptos-cli:4.1.0
+FROM econialabs/aptos-cli:4.1.0
 
 WORKDIR /app
 
